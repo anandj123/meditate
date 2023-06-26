@@ -13,8 +13,10 @@ let save_registration = () => {
     let question = {};
     question['user_name'] = document.getElementById('user_name').value;
     question['user_email'] = document.getElementById('user_email').value;
+    $.ajaxSetup({ cache: false });
 
     jQuery.ajax({
+        cache: false,
         type: "POST",
         url: "php/save.php",
         data: question,
