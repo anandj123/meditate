@@ -6,6 +6,8 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
+//location.reload(false);
+
 let save_registration = () => {
     if (document.getElementById('user_name').value == '' || document.getElementById('user_email').value == '') {
         alert("Please provide your name and email for registration.");
@@ -23,7 +25,7 @@ let save_registration = () => {
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: (data2, status, xhr) => {
             console.log(data2);
-            window.location.replace('success.html');
+            window.location.href = 'success.html';
         },
         error: (XMLHttpRequest, textStatus, errorThrown) => {
             console.log("Status: " + textStatus);
