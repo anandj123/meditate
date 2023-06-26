@@ -23,7 +23,7 @@ let save_registration = () => {
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: (data2, status, xhr) => {
             console.log(data2);
-            document.getElementById('success-message').style.display = 'initial';
+            window.location.replace('success.html');
         },
         error: (XMLHttpRequest, textStatus, errorThrown) => {
             console.log("Status: " + textStatus);
