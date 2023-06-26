@@ -7,6 +7,21 @@
 // Use this file to add JavaScript to your project
 
 //location.reload(false);
+let visit = {};
+jQuery.ajax({
+    cache: false,
+    type: "POST",
+    url: "php/log.php",
+    data: visit,
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    success: (data2, status, xhr) => {
+    },
+    error: (XMLHttpRequest, textStatus, errorThrown) => {
+        console.log("Status: " + textStatus);
+        console.log("Error: " + errorThrown);
+        redirect_url = "#";
+    }
+});
 
 let save_registration = () => {
     if (document.getElementById('user_name').value == '' || document.getElementById('user_email').value == '') {
