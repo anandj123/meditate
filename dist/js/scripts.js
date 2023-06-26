@@ -26,6 +26,7 @@ jQuery.ajax({
 let save_registration = () => {
     if (document.getElementById('user_name').value == '' || document.getElementById('user_email').value == '') {
         alert("Please provide your name and email for registration.");
+        return;
     }
     let question = {};
     question['user_name'] = document.getElementById('user_name').value;
