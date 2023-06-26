@@ -23,7 +23,7 @@ let save_registration = () => {
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: (data2, status, xhr) => {
             console.log(data2);
-            alert('Thank you for RSVP. See you soon!!!')
+            document.getElementById('success-message').style.display = 'initial';
         },
         error: (XMLHttpRequest, textStatus, errorThrown) => {
             console.log("Status: " + textStatus);
