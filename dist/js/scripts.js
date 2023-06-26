@@ -21,11 +21,7 @@ let save_registration = () => {
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: (data2, status, xhr) => {
             console.log(data2);
-            if (data2.includes("Error")) {
-                alert(data2);
-            } else {
-                console.log("success " + data2);
-            }
+            alert('Thank you for RSVP. See you soon!!!')
         },
         error: (XMLHttpRequest, textStatus, errorThrown) => {
             console.log("Status: " + textStatus);
