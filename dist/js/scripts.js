@@ -31,8 +31,11 @@ let save_registration = () => {
     let question = {};
     question['user_name'] = document.getElementById('user_name').value;
     question['user_email'] = document.getElementById('user_email').value;
+    question['number_of_people'] = document.getElementById('number_of_people').value;
     $.ajaxSetup({ cache: false });
-
+    if (isNaN(parseInt(question['number_of_people']))) {
+        question['number_of_people'] = -1;
+    }
     jQuery.ajax({
         cache: false,
         type: "POST",

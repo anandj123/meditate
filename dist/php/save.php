@@ -17,10 +17,11 @@ if ($conn->connect_error) {
 // Get values from request
 $user_name = $_POST['user_name'];
 $user_email = $_POST['user_email'];
+$number_of_people = $_POST['number_of_people'];
 $retreat_id = 1;
 
 // Insert into table
-$sql = "insert into registration(retreat_id, username,email,create_datetime)  values($retreat_id, '$user_name','$user_email',CURRENT_TIMESTAMP());";
+$sql = "insert into registration(retreat_id, username,email,number_of_people, create_datetime)  values($retreat_id, '$user_name','$user_email',$number_of_people,CURRENT_TIMESTAMP());";
 
 if ($conn -> query($sql) == TRUE) {
     echo 'New record inserted';    
